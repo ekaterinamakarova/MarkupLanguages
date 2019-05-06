@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="languages.xsl"?>
+
+<programming_languages>
+<language name="Assembler"> 
+    <category>Machine-oriented</category>
+    <level>Low-level</level>
+    <creation_date>
+    	<day>1</day>
+    	<month>1</month>
+    	<year>1949</year>
+    </creation_date>
+    <creator type="Company"></creator>
+</language>
+
+<language name="Pascal">
+    <category>Procedural</category>
+    <level>High-level</level>
+    <creation_date>
+    	<day>1</day>
+    	<month>1</month>
+    	<year>1970 </year>
+    </creation_date>
+    <creator type="Person"> </creator>
+</language>
+
+<language name="Python">
+    <category>Functional</category>
+    <level>High-level</level>    
+    <creation_date>
+    	<day>20</day>
+    	<month>02</month>
+    	<year>1991</year>
+    </creation_date>
+  <creator type="Person"> Guido van Rossum</creator>
+</language>
+
+<language name="Java"> 
+     <category>Object-oriented</category>
+     <level>High-level</level>
+     <creation_date>
+    	<day>1</day>
+    	<month>1</month>
+    	<year>1995</year>
+    </creation_date>
+    <creator type="Company">Oracle</creator>
+</language>
+
+</programming_languages>

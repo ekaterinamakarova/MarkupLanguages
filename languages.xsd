@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="programming_languages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="language" type="languageType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="languageType">
+    <xs:sequence>
+      <xs:element name="category" type="xs:string"/>
+      <xs:element name="level" type="xs:string"/>
+      <xs:element name="creation_date" type="creation_dateType"/>
+      <xs:element name="creator" type="creatorType"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="creation_dateType">
+    <xs:sequence>
+      <xs:element name="day" type="xs:integer"/>
+      <xs:element name="month" type="xs:integer"/>
+      <xs:element name="year" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="creatorType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="creatorTypeEnumeration" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="creatorTypeEnumeration" final="restriction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Person" />
+      <xs:enumeration value="Company" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
