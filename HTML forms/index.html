@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+
+<head> 
+	<meta charset="utf-8"> 
+	<title>Registration page</title> 
+	<link rel="stylesheet" href="styles.css"> 
+	<link rel="shortcut icon" type="image/png" href="internet.png" /> 
+</head> 
+
+<body> 
+	<form class="group" action="result.html" onsubmit="return Validate()" method="get"> 
+		<fieldset> 
+			<label class="group-header">Registration</label> 
+			<div class="field"> 
+				<label for="name">Name *<input type="text" name="name" id="name" required></label> 
+			</div> 
+			<div class="field"> 
+				<label for="surname">Surname * <input type="text" name="surname" id="surname" required></label> 
+			</div> 
+			<div class="gender"> 
+				<label>Gender</label> 
+				<div class="gender-block"> 
+					<div> 
+						<input type="radio" name="gender" value="male"> Male 
+					</div> 
+					<div> 
+						<input type="radio" name="gender" value="female"> Female 
+					</div> 
+				</div> 
+			</div> 
+			<div class="field"> 
+				<label>Date of birth<input type="date" name="date" id="date"></label> 
+			</div> 
+			<div class="field"> 
+				<label>E-mail *<input type="text" name="email" required></label> 
+			</div> 
+			<div class="field"> 
+				<label for="password">Password *</label> 
+				<input type="password" name="password" id="password" maxlength="12" required> 
+			</div> 
+			<div class="field"> 
+				<label for="password1">Repeat password *</label> 
+				<input type="password" name="password1" id="password1" maxlength="12" required> 
+			</div> 
+
+
+			<script type="text/javascript"> 
+				function Validate() { 
+					var password = document.getElementById("password").value; 
+					var password1 = document.getElementById("password1").value; 
+					if (password != password1) { 
+						alert("Пароли не совпадают!"); 
+						return false; 
+					} 
+				} 
+			</script> 
+
+			<div class="field button-group"> 
+				<input type="reset" value="Reset"> 
+				<input type="submit" value="Submit" /> 
+			</div> 
+		</fieldset> 
+	</form> 
+</body> 
+
+</html>
